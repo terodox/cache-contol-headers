@@ -1,0 +1,11 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - echo $PATH
+  artifacts:
+    files:
+        - index.html
+        - public/*
+    baseDirectory: src

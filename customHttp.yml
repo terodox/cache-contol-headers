@@ -1,0 +1,17 @@
+customHeaders:
+  - pattern: '**/public/iris-nebula-max-age.jpeg'
+    headers:
+      - key: cache-control
+        value: 'max-age=30, stale-while-revalidate'
+  - pattern: '**/public/iris-nebula-s-maxage.jpeg'
+    headers:
+      - key: cache-control
+        value: 's-maxage=30, stale-while-revalidate'
+  - pattern: '**/public/iris-nebula-max-age-larger-than-s-maxage.jpeg'
+    headers:
+      - key: cache-control
+        value: 's-maxage=30, max-age=60, stale-while-revalidate'
+  - pattern: '**/public/iris-nebula-max-age-less-than-s-maxage.jpeg'
+    headers:
+      - key: cache-control
+        value: 's-maxage=60, max-age=30, stale-while-revalidate'
